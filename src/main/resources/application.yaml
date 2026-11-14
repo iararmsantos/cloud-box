@@ -1,0 +1,21 @@
+server:
+  port: 5530
+spring:
+  application:
+    name: cloud-box-service
+  # database configuration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_box_service?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  flyway:
+    url: jdbc:mysql://localhost:3306
+    schemas: cloud_box_service
+    user: root
+    password: root
